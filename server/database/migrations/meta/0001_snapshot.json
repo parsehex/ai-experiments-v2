@@ -12,20 +12,20 @@
 					"name": "id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"user_id": {
 					"name": "user_id",
 					"type": "varchar(15)",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"hashed_password": {
 					"name": "hashed_password",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": false,
-				},
+					"notNull": false
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {
@@ -35,17 +35,17 @@
 					"tableTo": "auth_user",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"user_id",
+						"user_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
-				},
+					"onUpdate": "no action"
+				}
 			},
 			"compositePrimaryKeys": {},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"org": {
 			"name": "org",
@@ -55,31 +55,31 @@
 					"name": "id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"name": {
 					"name": "name",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"email": {
 					"name": "email",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"slug": {
 					"name": "slug",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {},
 			"compositePrimaryKeys": {},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"org_invitation": {
 			"name": "org_invitation",
@@ -89,27 +89,27 @@
 					"name": "email",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"org_id": {
 					"name": "org_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"role": {
 					"name": "role",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"auto_accept": {
 					"name": "auto_accept",
 					"type": "boolean",
 					"primaryKey": false,
 					"notNull": true,
-					"default": false,
-				},
+					"default": false
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {
@@ -119,25 +119,25 @@
 					"tableTo": "org",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"org_id",
+						"org_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
-				},
+					"onUpdate": "no action"
+				}
 			},
 			"compositePrimaryKeys": {
 				"org_invitation_email_org_id_pk": {
 					"name": "org_invitation_email_org_id_pk",
 					"columns": [
 						"email",
-						"org_id",
-					],
-				},
+						"org_id"
+					]
+				}
 			},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"org_member": {
 			"name": "org_member",
@@ -147,20 +147,20 @@
 					"name": "user_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"org_id": {
 					"name": "org_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"role": {
 					"name": "role",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {
@@ -170,13 +170,13 @@
 					"tableTo": "auth_user",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"user_id",
+						"user_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
+					"onUpdate": "no action"
 				},
 				"org_member_org_id_org_id_fk": {
 					"name": "org_member_org_id_org_id_fk",
@@ -184,25 +184,25 @@
 					"tableTo": "org",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"org_id",
+						"org_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
-				},
+					"onUpdate": "no action"
+				}
 			},
 			"compositePrimaryKeys": {
 				"org_member_user_id_org_id_pk": {
 					"name": "org_member_user_id_org_id_pk",
 					"columns": [
 						"user_id",
-						"org_id",
-					],
-				},
+						"org_id"
+					]
+				}
 			},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"product": {
 			"name": "product",
@@ -212,55 +212,55 @@
 					"name": "id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"name": {
 					"name": "name",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"code": {
 					"name": "code",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"pricing_monthly": {
 					"name": "pricing_monthly",
 					"type": "bigint",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"stripe_monthly_pricing_id": {
 					"name": "stripe_monthly_pricing_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"pricing_yearly": {
 					"name": "pricing_yearly",
 					"type": "bigint",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"stripe_yearly_pricing_id": {
 					"name": "stripe_yearly_pricing_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"features": {
 					"name": "features",
 					"type": "jsonb",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {},
 			"compositePrimaryKeys": {},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"user_session": {
 			"name": "user_session",
@@ -270,26 +270,26 @@
 					"name": "id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"user_id": {
 					"name": "user_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"active_expires": {
 					"name": "active_expires",
 					"type": "bigint",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"idle_expires": {
 					"name": "idle_expires",
 					"type": "bigint",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {
@@ -299,17 +299,17 @@
 					"tableTo": "auth_user",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"user_id",
+						"user_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
-				},
+					"onUpdate": "no action"
+				}
 			},
 			"compositePrimaryKeys": {},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"stripe_customer": {
 			"name": "stripe_customer",
@@ -319,20 +319,20 @@
 					"name": "id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"email": {
 					"name": "email",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"org_id": {
 					"name": "org_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {
@@ -342,17 +342,17 @@
 					"tableTo": "org",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"org_id",
+						"org_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
-				},
+					"onUpdate": "no action"
+				}
 			},
 			"compositePrimaryKeys": {},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"stripe_subscription": {
 			"name": "stripe_subscription",
@@ -362,45 +362,45 @@
 					"name": "stripe_subscription_id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"org_id": {
 					"name": "org_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"name": {
 					"name": "name",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"code": {
 					"name": "code",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"interval": {
 					"name": "interval",
 					"type": "varchar",
 					"primaryKey": false,
 					"notNull": true,
-					"default": "'month'",
+					"default": "'month'"
 				},
 				"stripe_customer_id": {
 					"name": "stripe_customer_id",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"expires": {
 					"name": "expires",
 					"type": "bigint",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {
@@ -410,17 +410,17 @@
 					"tableTo": "org",
 					"schemaTo": "public",
 					"columnsFrom": [
-						"org_id",
+						"org_id"
 					],
 					"columnsTo": [
-						"id",
+						"id"
 					],
 					"onDelete": "no action",
-					"onUpdate": "no action",
-				},
+					"onUpdate": "no action"
+				}
 			},
 			"compositePrimaryKeys": {},
-			"uniqueConstraints": {},
+			"uniqueConstraints": {}
 		},
 		"auth_user": {
 			"name": "auth_user",
@@ -430,20 +430,20 @@
 					"name": "id",
 					"type": "varchar",
 					"primaryKey": true,
-					"notNull": true,
+					"notNull": true
 				},
 				"email": {
 					"name": "email",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
+					"notNull": true
 				},
 				"name": {
 					"name": "name",
 					"type": "varchar",
 					"primaryKey": false,
-					"notNull": true,
-				},
+					"notNull": true
+				}
 			},
 			"indexes": {},
 			"foreignKeys": {},
@@ -453,17 +453,17 @@
 					"name": "auth_user_email_unique",
 					"nullsNotDistinct": false,
 					"columns": [
-						"email",
-					],
-				},
-			},
-		},
+						"email"
+					]
+				}
+			}
+		}
 	},
 	"enums": {},
 	"schemas": {},
 	"_meta": {
 		"columns": {},
 		"schemas": {},
-		"tables": {},
-	},
+		"tables": {}
+	}
 }
