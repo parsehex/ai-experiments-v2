@@ -1,7 +1,17 @@
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
 export default antfu({
-  rules: {
-    'import/order': 'off',
-  },
-})
+	stylistic: {
+		indent: 'tab',
+		quotes: 'single',
+		semi: true,
+	},
+	rules: {
+		'import/order': 'off',
+		'indent': ['error', 'tab'],
+	},
+	// vue: {
+	// 	overrides: {
+	// 	},
+	// },
+});
