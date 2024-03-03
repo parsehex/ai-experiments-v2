@@ -15,8 +15,7 @@ export default defineEventHandler(async (event) => {
 	try {
 		await authService.passwordLogin(event, email, password);
 		return reply(event, true);
-	}
-	catch (error) {
+	} catch (error) {
 		return reply(event, false, 401, 'Invalid email or password');
 	}
 });

@@ -49,8 +49,7 @@ class AuthService {
 				await orgService.addMember(org.id, user.id, 'owner');
 			}
 			return user;
-		}
-		catch (e) {
+		} catch (e) {
 			console.error(`error creating user: ${email}`, e);
 			return null;
 		}
@@ -63,8 +62,7 @@ class AuthService {
 			authRequest.setSession(session);
 			await userService.autoAcceptInvitations(session.user.email);
 			return session;
-		}
-		catch (e) {
+		} catch (e) {
 			console.error(`error creating session: ${userId}`, e);
 			return null;
 		}

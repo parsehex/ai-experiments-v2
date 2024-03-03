@@ -7,14 +7,14 @@ export default defineEventHandler(async (event) => {
 	const code = query.code?.toString();
 
 	// validate state
-	if (!storedState || !state || storedState !== state || !code) {
+	if (!storedState || !state || storedState !== state || !code)
 		return sendError(
 			event,
 			createError({
 				statusCode: 400,
 			}),
 		);
-	}
+
 	try {
 		const { getExistingUser, googleUser, createUser } = await googleAuth.validateCallback(code);
 		const getUser = async () => {
@@ -37,10 +37,9 @@ export default defineEventHandler(async (event) => {
 		const user = await getUser();
 		await authService.createSession(user.userId, event);
 		return sendRedirect(event, '/app'); // redirect to profile page
-	}
-	catch (e) {
+	} catch (e) {
 		console.error(e);
-		if (e instanceof OAuthRequestError) {
+		if (e instanceof OAuthRequestError)
 			// invalid code
 			return sendError(
 				event,
@@ -48,7 +47,7 @@ export default defineEventHandler(async (event) => {
 					statusCode: 400,
 				}),
 			);
-		}
+
 		return sendError(
 			event,
 			createError({
