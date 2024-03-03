@@ -9,6 +9,9 @@ export default antfu({
 	rules: {
 		'import/order': 'off',
 		'indent': ['error', 'tab'],
+		'curly': ['error', 'multi', 'consistent'],
+		'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+		'jsonc/comma-dangle': ['error', 'always-multiline'],
 	},
 	// vue: {
 	// 	overrides: {

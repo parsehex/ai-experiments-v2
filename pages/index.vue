@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <MarketingHero />
-  <MarketingFeatures />
-  <MarketingPricing />
-  <MarketingFAQ />
+	<MarketingHero />
+	<MarketingFeatures />
+	<MarketingPricing />
+	<MarketingFAQ />
 </template>

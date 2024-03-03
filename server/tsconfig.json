@@ -1,6 +1,6 @@
 {
-  "extends": "../.nuxt/tsconfig.server.json",
-  "compilerOptions": {
-    "noEmit": true
-  }
+	"extends": "../.nuxt/tsconfig.server.json",
+	"compilerOptions": {
+		"noEmit": true
+	}
 }

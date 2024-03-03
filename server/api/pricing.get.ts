@@ -1,3 +1,3 @@
 export default defineEventHandler(async () => {
-  return db.select().from(tables.product)
-})
+	return db.select().from(tables.product);
+});
