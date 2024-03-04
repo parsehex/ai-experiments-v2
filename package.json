@@ -16,7 +16,6 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"@huggingface/inference": "^2.6.4",
 		"@iconify/json": "^2.2.166",
 		"@lucia-auth/adapter-postgresql": "^2.0.2",
 		"@lucia-auth/oauth": "^3.5.1",
@@ -24,6 +23,7 @@
 		"ai": "^3.0.5",
 		"drizzle-orm": "^0.29.3",
 		"lucia": "^2.7.6",
+		"openai": "^4.28.4",
 		"postgres": "^3.4.3",
 		"slugify": "^1.6.6",
 		"stripe": "^14.11.0",
