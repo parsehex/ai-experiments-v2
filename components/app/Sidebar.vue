@@ -11,6 +11,11 @@ const appLinks = computed(() => [
 		to: base.value,
 	},
 	{
+		label: 'Tools',
+		icon: 'i-solar-laptop-minimalistic-bold-duotone',
+		to: `${base.value}/tools`,
+	},
+	{
 		label: 'Team',
 		icon: 'i-solar-users-group-rounded-line-duotone',
 		to: `${base.value}/team`,
