@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"docker-postgres": "docker run -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres -v /home/user/ai-experiments-data:/var/lib/postgresql/data postgres",
-		"dev": "nuxt dev",
+		"dev": "nuxt dev --host 0.0.0.0",
 		"build": "nuxt build",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
