@@ -6,14 +6,19 @@ const base = computed(() =>
 
 const appLinks = computed(() => [
 	{
-		label: 'Dashboard',
-		icon: 'i-solar-home-line-duotone',
-		to: base.value,
-	},
-	{
 		label: 'Tools',
 		icon: 'i-solar-laptop-minimalistic-bold-duotone',
 		to: `${base.value}/tools`,
+	},
+	{
+		label: 'Role Manager',
+		icon: 'i-solar-laptop-minimalistic-bold-duotone',
+		to: `${base.value}/role-manager`,
+	},
+	{
+		label: 'Dashboard',
+		icon: 'i-solar-home-line-duotone',
+		to: base.value,
 	},
 	{
 		label: 'Team',
