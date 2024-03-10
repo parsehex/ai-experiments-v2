@@ -36,7 +36,7 @@
 		"@nuxtjs/tailwindcss": "latest",
 		"@typescript-eslint/parser": "^7.1.0",
 		"@vue/language-server": "^1.8.27",
-		"drizzle-kit": "^0.20.10",
+		"drizzle-kit": "latest",
 		"eslint": "^8.57.0",
 		"husky": "^8.0.0",
 		"nuxt": "^3.9.1",
