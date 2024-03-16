@@ -15,6 +15,27 @@
 			"when": 1704843362211,
 			"tag": "0001_strange_jigsaw",
 			"breakpoints": true
+		},
+		{
+			"idx": 2,
+			"version": "5",
+			"when": 1710006710574,
+			"tag": "0002_harsh_donald_blake",
+			"breakpoints": true
+		},
+		{
+			"idx": 3,
+			"version": "5",
+			"when": 1710092950315,
+			"tag": "0003_glorious_mad_thinker",
+			"breakpoints": true
+		},
+		{
+			"idx": 4,
+			"version": "5",
+			"when": 1710095990230,
+			"tag": "0004_romantic_goblin_queen",
+			"breakpoints": true
 		}
 	]
 }

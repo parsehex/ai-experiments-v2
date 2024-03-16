@@ -21,6 +21,7 @@ const auth = lucia({
 	getUserAttributes: (user) => {
 		return {
 			id: user.id,
+			createdAt: user.created_at,
 			name: user.name,
 			email: user.email,
 		};
@@ -41,6 +42,7 @@ class AuthService {
 		try {
 			const user = await auth.createUser({
 				key: { providerId: PASS_AUTH_KEY, providerUserId: email.toLowerCase(), password },
+				// @ts-ignore created_at is set by default to now() in schema
 				attributes: { name, email },
 			});
 
