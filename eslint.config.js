@@ -12,6 +12,7 @@ export default antfu({
 		'indent': ['error', 'tab'],
 		'curly': ['error', 'multi', 'consistent'],
 		'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+		'ts/prefer-ts-expect-error': 'off',
 	},
 	// vue: {
 	// 	overrides: {
